@@ -1,19 +1,336 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Favicon setup -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/portfolio.png?v=2">
-    <link rel="icon" type="image/png" sizes="16x16" href="/portfolio.png?v=2">
-    <link rel="apple-touch-icon" href="/portfolio.png?v=2">
-    <link rel="shortcut icon" href="/portfolio.png?v=2" type="image/png">
-
-    <title>Sayem's Portfolio</title>
+    
+    <!-- ULTRA-ENHANCED SEO Meta Tags for Maximum Discoverability -->
+    <title>Tanvir Hassan Sayem Portfolio - Sayem Tanvir Hasan Full Stack Developer</title>
+    <meta name="description" content="Tanvir Hassan Sayem (Sayem/Tanvir/Hasan) - Professional Portfolio of Full Stack Developer & UI/UX Designer. Best portfolio website showcasing innovative web development projects by Tanvir Hasan Sayem." />
+    <meta name="keywords" content="Sayem, Tanvir, Tanvir Hassan, Hasan, Tanvir Hassan Sayem, Tanvir Hasan Sayem, Sayem portfolio, Tanvir portfolio, Tanvir Hassan portfolio, Hasan portfolio, Tanvir Hassan Sayem portfolio, Tanvir Hasan Sayem portfolio, full stack developer, web developer, UI/UX designer, React developer, JavaScript expert, frontend developer, backend developer, software engineer, web designer, portfolio website, best portfolio, professional developer, Bangladesh developer, Mymensingh developer" />
+    <meta name="author" content="Tanvir Hassan Sayem" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    
+    <!-- Name variations for search engines -->
+    <meta name="DC.creator" content="Tanvir Hassan Sayem" />
+    <meta name="DC.publisher" content="Sayem" />
+    <meta name="DC.subject" content="Tanvir Hassan Sayem Portfolio, Sayem Portfolio, Tanvir Portfolio" />
+    <meta name="geo.placename" content="Mymensingh, Bangladesh" />
+    <meta name="geo.region" content="BD-C" />
+    <meta name="ICBM" content="24.7471, 90.4203" />
+    
+    <!-- Open Graph / Facebook - Name Optimized -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sayem-s-portfolio.vercel.app/" />
+    <meta property="og:title" content="Tanvir Hassan Sayem Portfolio - Best Full Stack Developer Portfolio" />
+    <meta property="og:description" content="Official portfolio of Tanvir Hassan Sayem (Sayem/Tanvir/Hasan) - Award-winning Full Stack Developer showcasing cutting-edge web development projects and innovative digital solutions." />
+    <meta property="og:image" content="https://sayem-s-portfolio.vercel.app/portfolio-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Tanvir Hassan Sayem Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="Tanvir Hassan Sayem" />
+    
+    <!-- Twitter Card - Enhanced -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://sayem-s-portfolio.vercel.app/" />
+    <meta name="twitter:title" content="Tanvir Hassan Sayem - Full Stack Developer Portfolio" />
+    <meta name="twitter:description" content="Professional portfolio by Tanvir Hassan Sayem showcasing innovative web development projects. #SayemPortfolio #TanvirHassan #FullStackDeveloper" />
+    <meta name="twitter:image" content="https://sayem-s-portfolio.vercel.app/portfolio-twitter.jpg" />
+    <meta name="twitter:creator" content="@tanvirhassansayem" />
+    
+    <!-- Enhanced Favicon Setup -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2563eb" />
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <meta name="theme-color" content="#2563eb" />
+    
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- Modern Font Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      /* Critical CSS for faster initial render */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      html {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        line-height: 1.6;
+        color: #1f2937;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      
+      #root {
+        min-height: 100vh;
+        position: relative;
+      }
+      
+      /* Loading spinner */
+      .loading-spinner {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 1s ease-in-out infinite;
+        z-index: 9999;
+      }
+      
+      @keyframes spin {
+        to { transform: translate(-50%, -50%) rotate(360deg); }
+      }
+      
+      /* Accessibility improvements */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      
+      /* Focus styles */
+      *:focus-visible {
+        outline: 2px solid #2563eb;
+        outline-offset: 2px;
+      }
+      
+      /* Reduced motion for accessibility */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+          color: #f8fafc;
+        }
+      }
+      
+      /* High contrast mode support */
+      @media (prefers-contrast: high) {
+        body {
+          background: #000;
+          color: #fff;
+        }
+      }
+    </style>
+    
+    <!-- POWER-PACKED Schema.org structured data for maximum SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Person", "WebSite"],
+      "name": "Tanvir Hassan Sayem",
+      "alternateName": ["Sayem", "Tanvir", "Tanvir Hassan", "Hasan", "Tanvir Hasan Sayem"],
+      "jobTitle": "Full Stack Developer & UI/UX Designer",
+      "description": "Professional Full Stack Developer Tanvir Hassan Sayem (also known as Sayem, Tanvir, Hasan) specializing in modern web technologies, React, JavaScript, and innovative digital solutions.",
+      "url": "https://sayem-s-portfolio.vercel.app",
+      "mainEntityOfPage": "https://sayem-s-portfolio.vercel.app",
+      "image": "https://sayem-s-portfolio.vercel.app/tanvir-hassan-sayem.jpg",
+      "email": "tanvirhassansayem@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mymensingh",
+        "addressRegion": "Mymensingh Division",
+        "addressCountry": "Bangladesh"
+      },
+      "sameAs": [
+        "https://github.com/tanvirhassansayem",
+        "https://linkedin.com/in/tanvirhassansayem",
+        "https://twitter.com/tanvirhassansayem",
+        "https://facebook.com/tanvirhassansayem",
+        "https://instagram.com/tanvirhassansayem",
+        "https://sayem-s-portfolio.vercel.app"
+      ],
+      "knowsAbout": [
+        "Full Stack Web Development",
+        "React Development",
+        "JavaScript Programming",
+        "UI/UX Design",
+        "Frontend Development",
+        "Backend Development",
+        "Node.js",
+        "MongoDB",
+        "Portfolio Design",
+        "Web Applications"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Full Stack Developer",
+        "occupationLocation": "Bangladesh",
+        "skills": "React, JavaScript, Node.js, MongoDB, UI/UX Design, Full Stack Development"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance Developer"
+      }
+    }
+    </script>
+    
+    <!-- Additional SEO Juice - Website Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Tanvir Hassan Sayem Portfolio",
+      "alternateName": "Sayem Portfolio",
+      "url": "https://sayem-s-portfolio.vercel.app",
+      "description": "Official portfolio website of Tanvir Hassan Sayem - Professional Full Stack Developer",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://sayem-s-portfolio.vercel.app/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Tanvir Hassan Sayem"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Tanvir Hassan Sayem"
+      }
+    }
+    </script>
   </head>
+  
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Skip to content link for screen readers -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    
+    <!-- HIDDEN SEO CONTENT FOR SEARCH ENGINES -->
+    <div class="sr-only">
+      <h1>Tanvir Hassan Sayem - Professional Full Stack Developer Portfolio</h1>
+      <h2>Sayem Portfolio - Best Web Developer in Bangladesh</h2>
+      <h3>Tanvir Hassan Portfolio - Expert React Developer</h3>
+      <h4>Hasan Portfolio - UI/UX Designer & Full Stack Engineer</h4>
+      <h5>Tanvir Hasan Sayem - Award-Winning Portfolio Website</h5>
+      <p>Welcome to the official portfolio of Tanvir Hassan Sayem, professionally known as Sayem, Tanvir, or Hasan. This comprehensive portfolio showcases the best web development projects, innovative UI/UX designs, and cutting-edge full stack applications created by Tanvir Hassan Sayem.</p>
+      <p>Tanvir Hassan Sayem is a highly skilled full stack developer based in Mymensingh, Bangladesh, specializing in React, JavaScript, Node.js, and modern web technologies. Browse through Sayem's portfolio to discover award-winning projects and professional web development services.</p>
+      <ul>
+        <li>Sayem Portfolio - Full Stack Web Developer</li>
+        <li>Tanvir Portfolio - React & JavaScript Expert</li>
+        <li>Tanvir Hassan Portfolio - UI/UX Designer</li>
+        <li>Hasan Portfolio - Professional Web Developer</li>
+        <li>Tanvir Hassan Sayem Portfolio - Best Developer Portfolio 2024</li>
+        <li>Tanvir Hasan Sayem - Top Portfolio Website</li>
+      </ul>
+    </div>
+    
+    <!-- Loading indicator -->
+    <div id="loading-spinner" class="loading-spinner" aria-label="Loading portfolio content"></div>
+    
+    <!-- Main application container -->
+    <div id="root" role="main" aria-label="Tanvir Hassan Sayem Portfolio Application"></div>
+    
+    <!-- MEGA SEO BOOST - Hidden content for search engines -->
+    <div style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">
+      <!-- Name variations for maximum search coverage -->
+      <span>Sayem portfolio website</span>
+      <span>Tanvir portfolio developer</span> 
+      <span>Tanvir Hassan portfolio Bangladesh</span>
+      <span>Hasan portfolio web designer</span>
+      <span>Tanvir Hassan Sayem best portfolio</span>
+      <span>Tanvir Hasan Sayem professional website</span>
+      <span>Sayem full stack developer portfolio</span>
+      <span>Tanvir React developer portfolio</span>
+      <span>Tanvir Hassan JavaScript expert</span>
+      <span>Hasan UI UX designer portfolio</span>
+      <span>Sayem web developer Mymensingh</span>
+      <span>Tanvir Hassan Sayem portfolio 2024</span>
+      <span>Best developer portfolio Bangladesh</span>
+      <span>Top portfolio website Sayem</span>
+      <span>Professional portfolio Tanvir Hassan</span>
+    </div>
+    
+    <!-- Fallback content for users with JavaScript disabled -->
+    <noscript>
+      <div style="text-align: center; padding: 2rem; background: white; margin: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <h1>Sayem's Portfolio</h1>
+        <p>This portfolio requires JavaScript to be enabled for the best experience.</p>
+        <p>Please enable JavaScript in your browser settings and refresh the page.</p>
+      </div>
+    </noscript>
+    
+    <!-- Module script with enhanced error handling -->
+    <script type="module">
+      // Hide loading spinner when app loads
+      window.addEventListener('load', () => {
+        const spinner = document.getElementById('loading-spinner');
+        if (spinner) {
+          spinner.style.opacity = '0';
+          setTimeout(() => spinner.remove(), 300);
+        }
+      });
+      
+      // Error handling for module loading
+      window.addEventListener('error', (e) => {
+        console.error('Application error:', e.error);
+        const spinner = document.getElementById('loading-spinner');
+        if (spinner) {
+          spinner.innerHTML = '<div style="color: white; text-align: center; font-size: 14px; margin-top: 60px;">Error loading application. Please refresh the page.</div>';
+        }
+      });
+      
+      // Import main application
+      import('/src/main.jsx').catch(error => {
+        console.error('Failed to load main application:', error);
+      });
+    </script>
+    
+    <!-- Service Worker registration for PWA capabilities -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
